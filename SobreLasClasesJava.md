@@ -9,11 +9,11 @@ Aquí os presento algunas consideraciones que se debería tener en cuenta al des
 **[SOBRE LAS CLASES JAVA]( https://github.com/danicorpa/CleanCode/)**
 
 # TABLA DE CONTENIDOS
-- [COHESIÓN](#cohesión)
+- [COHESIÓN](#cohesion)
 - [CONSISTENCIA](#consistencia)
 - [CLARIDAD](#claridad)
 
-## Cohesión
+## Cohesion
 
 Una clase debe ser coherente, es decir, todos sus elementos deben servir a un mismo propósito, 
 a esto es lo que llamamos **cohesión**, de esta forma nuestra clase es un bloque o una unidad única y singular.
