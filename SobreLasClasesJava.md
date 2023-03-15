@@ -6,7 +6,7 @@
 
 Aquí os presento algunas consideraciones que se debería tener en cuenta al desarrollar las clases **Java** para dar más claridad al código, así como un mekor funcionamiento al programa final.
 
-**[SOBRE LAS CLASES JAVA]( https://github.com/danicorpa/CleanCode/)**
+**[Mi github]( https://github.com/danicorpa/CleanCode/)**
 
 # TABLA DE CONTENIDOS
 - [COHESIÓN](#cohesion)
