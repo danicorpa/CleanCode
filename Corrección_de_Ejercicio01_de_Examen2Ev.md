@@ -1,6 +1,6 @@
 ## Corrección de Ejercicio01 de Evaluación 2
 
-> by Daniel Matin Corpa
+> by Daniel Martin Corpa
 
 He cogido este ejemplo de clase java para mejorarla para que cumpla, en lo posible, los criterios de clean code.
 
