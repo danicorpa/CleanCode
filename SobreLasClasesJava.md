@@ -87,7 +87,7 @@ Luego, digamos que en algún punto de la aplicación un cliente o caller crea un
     ...
     }
 
-Este parece ser un inocente e inofensivo programa, pero más bien es ingenuo, presenta varias desventajas y al mismo tiempo corre varios peligros en manos de sus callers. Joshua Bloch, en su libro Effective Java recomienda: minimizar el acceso de clases y miembros de clase, algo que la clase PersonInfo claramente no hace. “Un componente bien diseñado oculta (encapsula) todos los detalles de su implementación y los componentes se comunican entre sí solo a través de sus APIs”.
+Este parece ser un inocente e inofensivo programa, pero más bien es ingenuo, presenta varias desventajas y al mismo tiempo corre varios peligros en manos de sus callers. Joshua Bloch, en su libro *Effective Java* recomienda: **minimizar el acceso de clases y miembros de clase**, algo que la clase PersonInfo claramente no hace. **“Un componente bien diseñado oculta (encapsula) todos los detalles de su implementación y los componentes se comunican entre sí solo a través de sus APIs”**.
 
 Para demostrar las debilidades y peligros que corren los objetos de la clase PersonInfo vamos a suponer que nuestro recién creado objeto es pasado a otro para procesar, por ejemplo, un registro en una bitácora:
 
@@ -192,7 +192,7 @@ Si lo notaste, el accesor getBirthday() devuelve un String y no un LocalDateTime
 ## Colecciones y parámetros en constructores
 
 ----
-Si la clase que estamos definiendo tiene referencias a objetos mutables (Collections, StringBuilders u otros objetos, por ejemplo) que fueron recibidos como parámetros en constructores o que están expuestos a través de accesors, tienes que asegurarte que es el objeto el que tiene acceso exclusivo a esto atributos. Esto es, el cliente que construye la instancia o pide por el atributo no debe ser capaz de modificar dicho objeto. ¿Cómo lograrlo? No inicialices un campo con referencias a objetos provistas por los clientes o no regreses un campo mutable desde un accesor. Una técnica para asegurar el acceso exclusivo es generar copias defensivas tanto de parámetros mutables recibidos en constructores, como de atributos mutables en accesors y en métodos readObject (en caso de serialización).
+Si la clase que estamos definiendo tiene referencias a objetos mutables (Collections, StringBuilders u otros objetos, por ejemplo) que fueron recibidos como parámetros en constructores o que están expuestos a través de accesors, tienes que asegurarte que es el objeto el que tiene **acceso exclusivo** a esto atributos. Esto es, el cliente que construye la instancia o pide por el atributo no debe ser capaz de modificar dicho objeto. ¿Cómo lograrlo? **No inicialices un campo con referencias a objetos provistas por los clientes o no regreses un campo mutable desde un *accesor***. Una técnica para asegurar el acceso exclusivo es generar copias defensivas tanto de parámetros mutables recibidos en constructores, como de atributos mutables en accesors y en métodos *readObject* (en caso de serialización).
 
 Para ver esta situación en acción, supongamos que implementamos la clase Student. Un estudiante tiene un nombre y una lista de cursos. El siguiente sería nuestro intento de hacer de Student una clase inmutable:
 
@@ -228,7 +228,7 @@ Para ver esta situación en acción, supongamos que implementamos la clase Stude
 
 Pero, ¿Es realmente inmutable la clase Student? Sin analizar con detenimiento, podrías asegurar que sí, la clase es inmutable; como courses es final, como se inicializó en el construtor y además como no hay ningún mutator definido, la lista de cursos a los que un estudiante está inscrito no podrá modificarse.
 
-Sin embargo, y aunque lo parezca, la clase Student no es completamente inmutable. La palabra reservada final en un atributo de clase (técnicamente en una referencia) garantiza que una referencia, en este caso courses, nunca apunte a otro objeto o tenga otro valor una vez que ha sido definida (por ejemplo, courses = new ArrayList<>() dispararía un error de compilación). Si bien la referencia se ha protegido, lo que ha quedado desprotegido aquí es el objeto al que esta referencia apunta, la lista de cursos como tal, perdiendo así la exclusividad en el acceso a dicha lista. Su vulnerabilidad se puede ver en el siguiente código de un malicioso caller:
+Sin embargo, y aunque lo parezca, la clase Student no es completamente inmutable. La palabra reservada final en un atributo de clase (técnicamente en una referencia) **garantiza que una referencia**, en este caso courses, nunca apunte a otro objeto o tenga otro valor una vez que ha sido definida (por ejemplo, courses = new ArrayList<>() dispararía un error de compilación). Si bien la referencia se ha protegido, lo que ha quedado desprotegido aquí es el objeto al que esta referencia apunta, la lista de cursos como tal, **perdiendo así la exclusividad** en el acceso a dicha lista. Su vulnerabilidad se puede ver en el siguiente código de un malicioso caller:
 
     class Teacher {
 
