@@ -34,12 +34,12 @@ Por último la claridad de nuestra clase es primordial para que nuestro código 
 así pues una *clase Persona* pueda contener atributos y métodos que puedan aplicarse en diferentes contextos sin que 
 la clase pierda su esencia.
 
-~~~
+
 Otro aspecto a tener en cuenta es que no podemos colocar atributos que puedan ser derivados de otros, de esta forma podemos evitar confusiones y escribir código innecesario, veamos en el ejemplo siguiente a que nos referimos con ello.
 
 
 ![](/img/tutorials-2308-0-04393300-1405804343.jpg)
-~~~
+
 
 Vemos que tenemos un atributo **edad**, pero la edad la podemos saber de la fecha de nacimiento, por lo que estamos declarando un atributo que no es necesario y que nos puede generar confusiones, si queremos saber la edad podemos crear un método que lo calcule tomando el atributo **fechaNacimiento**.
 
