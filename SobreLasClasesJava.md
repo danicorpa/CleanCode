@@ -65,6 +65,7 @@ Analicemos el siguiente código:
  
 
 `class PersonInfo {
+
 public String name;
 public LocalDateTime birthday;
 }` 
