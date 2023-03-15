@@ -3,10 +3,14 @@
 
 > By Daniel Martin Corpa
 
+
 Aquí os presento algunas consideraciones que se debería tener en cuenta al desarrollar las clases **Java** para dar más claridad al código, así como un mekor funcionamiento al programa final.
 
 [](https://github.com/danicorpa/CleanCode)
-
+# TABLA DE CONTENIDOS
+- [COHESIÓN](#cohesion)
+- [CONSISTENCIA](#consistencia)
+- [CLARIDAD](#claridad)
 
 ## Cohesión
 
