@@ -8,12 +8,6 @@ Aquí os presento algunas consideraciones que se debería tener en cuenta al des
 
 **[Mi github]( https://github.com/danicorpa/CleanCode/)**
 
-# TABLA DE CONTENIDOS
-- [COHESIÓN](#cohesion)
-- [CONSISTENCIA](#consistencia)
-- [CLARIDAD](#claridad)
-- [INMUTABILIDAD](#inmutabilidad)
-- [LOS OBJETOS EN LA OOP](#losobjetosenlaoop)
 
 ## Cohesion
 
