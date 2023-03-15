@@ -13,7 +13,7 @@ Aquí os presento algunas consideraciones que se debería tener en cuenta al des
 - [CONSISTENCIA](#consistencia)
 - [CLARIDAD](#claridad)
 - [INMUTABILIDAD](#inmutabilidad)
-- [LOS OBJETOS EN LA OOP](#oop)
+- [LOS OBJETOS EN LA OOP](#losobjetosenlaoop)
 
 ## Cohesion
 
