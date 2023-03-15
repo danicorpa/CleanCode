@@ -31,9 +31,6 @@ Otro aspecto a tener en cuenta es que no podemos colocar atributos que puedan se
 ![Imágen](/img/tutorials-2308-0-04393300-1405804343.jpg)
 ~~~
 
-Vemos que tenemos un atributo edad, pero la edad la podemos saber de la fecha de nacimiento, por lo que estamos 
-declarando un atributo que no es necesario y que nos puede generar confusiones, si queremos saber la edad podemos 
-crear un método que lo calcule tomando el atributo fechaNacimiento.
+Vemos que tenemos un atributo **edad**, pero la edad la podemos saber de la fecha de nacimiento, por lo que estamos declarando un atributo que no es necesario y que nos puede generar confusiones, si queremos saber la edad podemos crear un método que lo calcule tomando el atributo **fechaNacimiento**.
 
-Como podemos ver para generar una buena clase en Java no solo basta que no existen errores sintácticos ni semánticos, 
-también debemos tener en cuenta la calidad del mismo.
+Como podemos ver para generar una buena clase en **Java* no solo basta que no existen errores sintácticos ni semánticos, también debemos tener en cuenta la calidad del mismo.
