@@ -87,7 +87,7 @@ Luego, digamos que en algún punto de la aplicación un cliente o caller crea un
     ...
     }
 
-Este parece ser un inocente e inofensivo programa, pero más bien es ingenuo, presenta varias desventajas y al mismo tiempo corre varios peligros en manos de sus callers. Joshua Bloch, en su libro *Effective Java* recomienda: **minimizar el acceso de clases y miembros de clase**, algo que la clase PersonInfo claramente no hace. **“Un componente bien diseñado oculta (encapsula) todos los detalles de su implementación y los componentes se comunican entre sí solo a través de sus APIs”**.
+Este parece ser un inocente e inofensivo programa, pero más bien es ingenuo, presenta varias desventajas y al mismo tiempo corre varios peligros en manos de sus callers. Joshua Bloch, en su libro *[Effective Java](https://github.com/GunterMueller/Books-3/blob/master/Effective%20Java%20(3rd%20Edition).pdf)* recomienda: **minimizar el acceso de clases y miembros de clase**, algo que la clase PersonInfo claramente no hace. **“Un componente bien diseñado oculta (encapsula) todos los detalles de su implementación y los componentes se comunican entre sí solo a través de sus APIs”**.
 
 Para demostrar las debilidades y peligros que corren los objetos de la clase PersonInfo vamos a suponer que nuestro recién creado objeto es pasado a otro para procesar, por ejemplo, un registro en una bitácora:
 
@@ -270,7 +270,7 @@ Otro beneficio de los objetos inmutables es su uso en la paralelización. Desde 
 ## ¿Desventajas?
 
 -----
-Si se considera como tal, la única desventaja real de utilizar objetos inmutables sería que si después de haber sido concebidos como inmutables, ahora sea necesario mutar el estado de estos objetos (sus atributos). Habrá entonces que crear nuevos objetos por cada nuevo valor y/o hacer una refactorización del código que los utiliza. Crear objetos puede resultar costoso (aunque esto no siempre cierto para objetos inmutables debido a las optimizaciones de la JVM y GC), especialmente para aquellos que son bastante grandes y de los cuales solo mutaría una pequeña cantidad de sus atributos. La concatenación de Strings (inmutables), por ejemplo, en un proceso de miles o millones de cadenas sería ineficiente. Usar un StringBuilder (mutable), es más adecuado en este escenario.
+Si se considera como tal, la única desventaja real de utilizar objetos inmutables sería que si después de haber sido concebidos como inmutables, ahora sea necesario mutar el estado de estos objetos (sus atributos). Habrá entonces que crear nuevos objetos por cada nuevo valor y/o hacer una refactorización del código que los usa. Generar objetos puede resultar costoso (aunque esto no siempre cierto para objetos inmutables debido a las optimizaciones de la JVM y GC), especialmente para aquellos que son bastante grandes y de los cuales solo mutaría una pequeña cantidad de sus atributos. La concatenación de Strings (inmutables), por ejemplo, en un proceso de miles o millones de cadenas sería ineficiente. Usar un StringBuilder (mutable), es más adecuado en este escenario.
 
 Para el caso de la creación de objetos de clases que tienen muchos atributos, inicializarlos a través de un constructor puede caer en el antipattern Telescoping Constructor o constructor telescópico, pero esto más que una desventaja, es un problema de legibilidad y mantenimiento del código, además de no ser exclusivo de objetos inmutables. Para solucionarlo, el patrón “Builder” es la solución de facto.
 
@@ -301,4 +301,4 @@ Implementar código endeble y vulnerable que no considera buenas prácticas de O
 #### Bibliografía
 * [https://www.solvetic.com/tutoriales/article/973-java-bases-para-el-diseno-de-clases/](https://www.solvetic.com/tutoriales/article/973-java-bases-para-el-diseno-de-clases/)
 * [https://www.bbvanexttechnologies.com/blogs/inmutabilidad-la-clave-para-crear-un-buen-diseno-en-java/](https://www.bbvanexttechnologies.com/blogs/inmutabilidad-la-clave-para-crear-un-buen-diseno-en-java/)
-* EL libro que se comenta es Effective Java y lo puedes ver [aqui](https://github.com/GunterMueller/Books-3/blob/master/Effective%20Java%20(3rd%20Edition).pdf) en inglés.  
+* EL libro que se comenta es *Effective Java* y lo puedes ver [aqui](https://github.com/GunterMueller/Books-3/blob/master/Effective%20Java%20(3rd%20Edition).pdf) en inglés.  
