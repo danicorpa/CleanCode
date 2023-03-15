@@ -104,7 +104,6 @@ ____
 ## Código Original
 
 ---
-
     public class Ejercicio01 {
     public static void main(String[] args) {
     int[][] enteros = new int[5][5];
@@ -113,7 +112,7 @@ ____
     enteros[i][j] = (int) (Math.random() * 10);
         }
     }
-ampliado
+
         for (int i = 0; i < enteros.length; i++) {
             for (int j = 0; j < enteros[i].length; j++) {
                 System.out.print(enteros[i][j] + "\t");
@@ -138,7 +137,7 @@ ampliado
             }
             System.out.println();
             }
-
+    
         }
 
 
